@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-slim
 
-LABEL maintainer="karthik Pyati <797979>"
+maintainer "karthik Pyati <777>"
 
 WORKDIR /usr/app/
 COPY target/spring-boot-docker-app.jar /usr/app/
