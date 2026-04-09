@@ -1,11 +1,11 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-alpine
 
-maintainer "karthik Pyati <777>"
+LABEL maintainer="karthik Pyati"
 
-WORKDIR /usr/app/
-COPY target/spring-boot-docker-app.jar /usr/app/
+WORKDIR /usr/app
 
+COPY target/*.jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "spring-boot-docker-app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
